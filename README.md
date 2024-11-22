@@ -1,4 +1,4 @@
-```markdown
+
 # Animal Matching Game
 
 This project is a simple game designed to enhance children's object recognition and language abilities. The game displays an animal name, and the player has to click the correct animal image among 16 options. If the player makes the correct choice, the result shows "win"; otherwise, it shows "lose".
