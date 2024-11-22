@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import SelectAnimal from './Components/SelectAnimal/SelectAnimal';
+import AnimalName from './Components/AnimalName/AnimalName';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
 
         </div>
         <div className="animalName">
-
+          <AnimalName/>
         </div>
         <div className="animalPhotos">
           <SelectAnimal/>
