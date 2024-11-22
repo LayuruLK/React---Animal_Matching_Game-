@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import SelectAnimal from './Components/SelectAnimal/SelectAnimal';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
 
       </div>
       <div className="animalPhotos">
-        
+        <SelectAnimal/>
       </div>
     </div>
   );
