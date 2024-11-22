@@ -19,6 +19,7 @@ export default function AnimalName(props){
             
             <p>{animal.name}</p>
             {props.numfun(number)}
+            
         </>
     );
 }

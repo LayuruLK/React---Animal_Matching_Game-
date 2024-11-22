@@ -20,7 +20,6 @@ function App() {
   return (
     <div className="App">
       <div className="title">
-      <p>{number}</p>
         <h1>ANIMAL MATCHING GAME</h1>
       </div>
       <div className='container'>
