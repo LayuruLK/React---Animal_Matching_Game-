@@ -1,7 +1,15 @@
-img {
-    width: 25%;
-}
+.imglist {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    padding: 18px;
+    justify-items: center; 
+  }
+  
 
-.title_selectAnimal{
-    text-align: center;
-}
+  img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 8px;
+  }
+  

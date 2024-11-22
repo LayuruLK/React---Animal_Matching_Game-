@@ -1,18 +1,35 @@
+import { useState, useEffect } from 'react';
 import { animals } from '../../AnimalsDb.js'; 
-import './SelectAnimal.css'
+import './SelectAnimal.css';
 
-export default function SelectAnimal(){
-    return(
-        <div className="container">
-            <div className="title_selectAnimal">
-                <h3>Select the Animal</h3>
-        
-                {
-                    animals.map((animal) =>
-                        <img src={require(`../../fig/fig/${animal.img}`)} alt="Animal" />
-                    )
-                }
-            </div>
+
+const shuffleArray = (array) => {
+  const shuffled = [...array]; 
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; 
+  }
+  return shuffled;
+};
+
+export default function AnimalName() {
+  const [shuffledAnimals, setShuffledAnimals] = useState([]);
+
+  useEffect(() => {
+    setShuffledAnimals(shuffleArray(animals));
+  }, []);
+
+  return (
+    <div className='imglist'>
+      {shuffledAnimals.map((animal, index) => (
+        <div key={index}>
+          <img
+            src={require(`../../fig/fig/${animal.img}`)}
+            alt={animal.name}
+          />
+          
         </div>
-    );
+      ))}
+    </div>
+  );
 }
