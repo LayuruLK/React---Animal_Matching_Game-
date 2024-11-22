@@ -12,12 +12,20 @@ const shuffleArray = (array) => {
   return shuffled;
 };
 
-export default function AnimalName() {
+export default function SelectAnimal(props) {
   const [shuffledAnimals, setShuffledAnimals] = useState([]);
 
   useEffect(() => {
     setShuffledAnimals(shuffleArray(animals));
   }, []);
+
+  const handleImageClick = (index) =>{
+    if(index === props.num) {
+        props.setResultMessage("Win");
+    } else {
+        props.setResultMessage("Lose");
+    }
+  }
 
   return (
     <div className='imglist'>
@@ -26,6 +34,7 @@ export default function AnimalName() {
           <img
             src={require(`../../fig/fig/${animal.img}`)}
             alt={animal.name}
+            onClick={() => handleImageClick(index)}
           />
           
         </div>
