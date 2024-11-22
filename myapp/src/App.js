@@ -8,14 +8,16 @@ function App() {
       <div className="title">
         <h1>ANIMAL MATCHING GAME</h1>
       </div>
-      <div className="result">
+      <div className='container'>
+        <div className="result">
 
-      </div>
-      <div className="animalName">
+        </div>
+        <div className="animalName">
 
-      </div>
-      <div className="animalPhotos">
-        <SelectAnimal/>
+        </div>
+        <div className="animalPhotos">
+          <SelectAnimal/>
+        </div>
       </div>
     </div>
   );
